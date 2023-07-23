@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
   }
 
   -- UI
-  use {"sainnhe/gruvbox-material"}
+  use { "catppuccin/nvim", as = "catppuccin" }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
