@@ -7,7 +7,7 @@ return require('packer').startup(function(use)
 
   -- Telescope
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim', tag = '0.1.5',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
@@ -42,7 +42,12 @@ return require('packer').startup(function(use)
   }
 
   -- UI
-  use { "catppuccin/nvim", as = "catppuccin" }
+  use({
+  "neanias/everforest-nvim",
+  config = function()
+    require("everforest").setup()
+  end,
+  })
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
