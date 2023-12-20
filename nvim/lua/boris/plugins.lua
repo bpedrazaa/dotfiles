@@ -51,6 +51,8 @@ return require('packer').startup(function(use)
       require("everforest").setup()
     end,
   })
+  -- Gruvbox
+  use { "ellisonleao/gruvbox.nvim" }
 
   use {
     'nvim-lualine/lualine.nvim',
