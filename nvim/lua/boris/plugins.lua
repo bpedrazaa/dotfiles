@@ -41,13 +41,17 @@ return require('packer').startup(function(use)
     }
   }
 
-  -- UI
+  -- COLORSCHEMES 
+  -- Catppuccin
+  use { "catppuccin/nvim", as = "catppuccin" }
+  -- Everforest
   use({
-  "neanias/everforest-nvim",
-  config = function()
-    require("everforest").setup()
-  end,
+    "neanias/everforest-nvim",
+    config = function()
+      require("everforest").setup()
+    end,
   })
+
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
