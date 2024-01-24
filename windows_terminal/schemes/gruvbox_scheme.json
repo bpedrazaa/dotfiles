@@ -12,12 +12,12 @@
   "brightYellow": "#D8A657",
   "cursorColor": "#FFFFFF",
   "cyan": "#89B482",
-  "foreground": "#D4BE98",
+  "foreground": "#EBDBB2",
   "green": "#A9B665",
   "name": "GruvboxDark",
   "purple": "#D3869B",
   "red": "#EA6962",
   "selectionBackground": "#FFFFFF",
-  "white": "#D4BE98",
+  "white": "#EBDBB2",
   "yellow": "#D8A657"
 }
