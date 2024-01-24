@@ -1,3 +1,2 @@
-require("boris.settings")
-require("boris.keybinds")
-require("boris.plugins")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
