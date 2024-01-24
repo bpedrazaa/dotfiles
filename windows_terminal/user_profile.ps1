@@ -27,3 +27,21 @@ $ScriptBlock = {
 Set-PSReadLineOption -AddToHistoryHandler $ScriptBlock
 
 Import-Module -Name Terminal-Icons
+
+function tc{
+    param(
+        [Parameter(Mandatory = $false, Position = 0)]
+        [string]$FolderPath = $PWD,
+        [Parameter(Mandatory = $false, Position = 1)]
+        [Alias('r')]
+        [switch]$RightPane
+    )
+    if($RightPane){
+        $pane = "R"
+    }
+    else{
+        $pane = "L"
+    }
+
+    & "C:\Program Files\Totalcmd\TOTALCMD64.EXE" /O /T /$pane="$FolderPath"
+}
