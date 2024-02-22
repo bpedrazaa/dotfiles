@@ -11,13 +11,11 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 
 $ScriptBlock = {
     Param([string]$line)
-
     $allowedCommands = @(
       'ls',
       'clear',
       'exit'
     )
-
     if (($line -match '^(git|docker|ssh|scp|choco|nvim|cd)') -or ($allowedCommands -contains $line)){
         return $false
     } else {
