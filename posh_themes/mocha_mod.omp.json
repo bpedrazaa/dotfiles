@@ -1,0 +1,136 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "background": "#313244",
+          "foreground": "#b4befe",
+          "leading_diamond": "\ue0b2",
+          "properties": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\ue711",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31c",
+            "windows": "\ue70f"
+          },
+          "style": "diamond",
+          "template": " {{ if .WSL }}\ue712 on {{ end }}{{ .Icon }}  ",
+          "type": "os"
+        },
+        {
+          "background": "#45475a",
+          "foreground": "#89dceb",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "powerline",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "#313244",
+          "foreground": "#a6e3a1",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#fab387{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f38ba8{{ end }}",
+            "{{ if gt .Ahead 0 }}#74c7ec{{ end }}",
+            "{{ if gt .Behind 0 }}#89b4fa{{ end }}"
+          ],
+          "properties": {
+            "branch_max_length": 30,
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#a6e3a1",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": "<#eba0ac> \u007C </><#89dceb>\ue718</> {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "type": "node"
+        },
+        {
+          "type": "php",
+          "style": "powerline",
+          "foreground": "#a6e3a1",
+          "template": "<#eba0ac> \u007C </><#89dceb>\ue73d</> {{ .Full }}"
+        },
+        {
+          "type": "npm",
+          "style": "powerline",
+          "foreground": "#a6e3a1",
+          "template": "<#eba0ac> \u007C </><#89dceb>\ue71e </> {{ .Full }}"
+        },
+        {
+          "type": "sysinfo",
+          "style": "powerline",
+          "foreground": "#a6e3a1",
+          "template": "<> </>"
+        },
+        {
+          "background": "#45475a",
+          "foreground": "#cdd6f4",
+          "leading_diamond": "\ue0b2",
+          "trailing_diamond": "\ue0b0",
+          "properties": {
+            "style": "austin",
+            "threshold": 150
+          },
+          "style": "diamond",
+          "template": "⌛  {{ .FormattedMs }} ",
+          "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#b4befe",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#f38ba8{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "\u276f",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}

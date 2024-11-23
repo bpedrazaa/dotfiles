@@ -1,0 +1,105 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "properties": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\ue711",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31c",
+            "windows": "\ue70f"
+          },
+          "style": "diamond",
+          "leading_diamond": "\ue0b2",
+          "template": " {{ if .WSL }}\ue712 on {{ end }}{{ .Icon }}  ",
+          "foreground": "#2E3440",
+          "background": "#81A1C1",
+          "type": "os"
+        },
+        {
+          "properties": {
+            "style": "folder"
+          },
+          "style": "powerline",
+          "template": "<b> {{ .Path }} </b>",
+          "foreground": "#2E3440",
+          "background": "#8FBCBB",
+          "powerline_symbol": "\ue0b0",
+          "type": "path"
+        },
+        {
+          "properties": {
+            "branch_max_length": 50,
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "style": "powerline",
+          "trailing_diamond": "\ue0b4",
+          "template": "<b> {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} </b>",
+          "foreground": "#9EC183",
+          "powerline_symbol": "\ue0b0",
+          "background": "#3F4758",
+          "type": "git",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#D9A58C{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#e06c75{{ end }}",
+            "{{ if gt .Ahead 0 }}#88C0D0{{ end }}",
+            "{{ if gt .Behind 0 }}#EBCB8B{{ end }}"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": "<#cc7eda> | </><#7eb8da>\ue718</> {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "foreground": "#8ec07c",
+          "type": "node"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "❯",
+          "foreground": "#88C0D0",
+          "type": "text",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#e06c75{{ end }}"
+          ]
+        }
+      ]
+    }
+  ],
+  "version": 3,
+  "final_space": true
+}

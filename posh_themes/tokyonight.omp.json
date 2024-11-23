@@ -1,0 +1,136 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\ue711",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31c",
+            "windows": "\ue70f"
+          },
+          "style": "diamond",
+          "leading_diamond": "\ue0b2",
+          "template": " {{ if .WSL }}\ue712 on {{ end }}{{ .Icon }}  ",
+          "foreground": "#222436",
+          "background": "#7dcfff",
+          "type": "os"
+        },
+        {
+          "properties": {
+            "style": "folder"
+          },
+          "style": "powerline",
+          "template": " {{ .Path }} ",
+          "foreground": "#222436",
+          "powerline_symbol": "\ue0b0",
+          "background": "#9ece6a",
+          "type": "path"
+        },
+        {
+          "properties": {
+            "branch_max_length": 50,
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "style": "powerline",
+          "trailing_diamond": "\ue0b4",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "foreground": "#9ece6a",
+          "powerline_symbol": "\ue0b0",
+          "background": "#222436",
+          "type": "git",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#ff966c{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f7768e{{ end }}",
+            "{{ if gt .Ahead 0 }}#7aa2f7{{ end }}",
+            "{{ if gt .Behind 0 }}#7dcfff{{ end }}"
+          ]
+        }
+      ],
+      "newline": true
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": "<#cc7eda> | </><#7eb8da>\ue718</> {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "foreground": "#8ec07c",
+          "type": "node"
+        },
+        {
+          "style": "powerline",
+          "template": "<#cc7eda> | </><#7eb8da>\ue73d</> {{ .Full }}",
+          "foreground": "#8ec07c",
+          "type": "php"
+        },
+        {
+          "style": "powerline",
+          "template": "<#cc7eda> | </><#7eb8da>\ue71e </> {{ .Full }}",
+          "foreground": "#8ec07c",
+          "type": "npm"
+        },
+        {
+          "style": "powerline",
+          "template": "<> </>",
+          "foreground": "#8ec07c",
+          "type": "sysinfo"
+        },
+        {
+          "properties": {
+            "style": "austin",
+            "threshold": 150
+          },
+          "style": "diamond",
+          "leading_diamond": "\ue0b2",
+          "trailing_diamond": "\ue0b0",
+          "template": "\u231b  {{ .FormattedMs }} ",
+          "foreground": "#4b4b4b",
+          "background": "#cecece",
+          "type": "executiontime"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "❯",
+          "foreground": "#c8d3f5",
+          "type": "exit",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#ff0000{{ end }}"
+          ]
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "version": 3,
+  "final_space": true
+}

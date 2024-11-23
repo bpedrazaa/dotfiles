@@ -1,0 +1,25 @@
+export HISTFILE="$HOME/.zsh/.zsh_history"
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+export ZSH="$HOME/.zsh/oh-my-zsh"
+ZSH_THEME=""
+HYPHEN_INSENSITIVE="true"
+
+plugins=(
+  colored-man-pages
+  copypath
+  copyfile
+  sudo
+  vi-mode
+  zoxide
+  zsh-autopair
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+source $ZSH/oh-my-zsh.sh
+
+export EDITOR='nvim'
+eval "$(oh-my-posh init zsh --config ~/.posh_themes/onenord.omp.json)"
+export PATH="$PATH:/home/bpedrazaa/.local/bin"
+source /usr/share/nvm/init-nvm.sh
+export _JAVA_AWT_WM_NONREPARENTING=1
+export AWT_TOOLKIT=MToolkit
