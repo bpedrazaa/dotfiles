@@ -78,6 +78,7 @@ static const char *spotify_next[] = { "dbus-send", "--print-reply", "--dest=org.
 static const char *spotify_prev[] = { "dbus-send", "--print-reply", "--dest=org.mpris.MediaPlayer2.spotify", "/org/mpris/MediaPlayer2", "org.mpris.MediaPlayer2.Player.Previous", NULL };
 static const char *spotify_play_pause[] = { "dbus-send", "--print-reply", "--dest=org.mpris.MediaPlayer2.spotify", "/org/mpris/MediaPlayer2", "org.mpris.MediaPlayer2.Player.PlayPause", NULL };
 static const char *obs[] = { "obs", NULL };
+static const char *flameshot[] = { "flameshot", "gui", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -90,6 +91,7 @@ static const Key keys[] = {
 	{ ControlMask,                  XK_Tab,    spawn,          {.v = spotify_play_pause} },
 	{ MODKEY,                       XK_o,      spawn,          {.v = obs} },
 	{ MODKEY,                       XK_space,  spawn,          {.v = rofi } },
+  { 0,                            XK_Print,  spawn,          {.v = flameshot } },
   /* dwm shortcuts */
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
