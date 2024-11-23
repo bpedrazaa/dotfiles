@@ -1,8 +1,8 @@
 # Personal Dotfiles
 
-This repository contains my personal dotfiles. It is a **work in progress**, so not everything is fully configured or polished yet.
-My current working station is an Arch Linux machine.
-The current color scheme I'm obsessed with right now is Nord, so all the configurations are made to match its palette.
+- This repository contains my personal dotfiles. It is a **work in progress**, so not everything is fully configured or polished yet.
+- My current working station is an Arch Linux machine.
+- The current color scheme I'm obsessed with right now is Nord, so all the configurations are made to match its palette.
 
 ## Current State
 
