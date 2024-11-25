@@ -1,0 +1,7 @@
+--------------- 04-10-2024, 08:35:03 ---------------
+| DC v1.1.18 gamma Rev. 568 -- x86_64-Linux-gtk2
+| Arch Linux -- GTK 2.24.33 | PID 1443
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $000000000042CB4D
+

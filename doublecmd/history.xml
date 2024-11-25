@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <History>
+    <Navigation>
+      <Item>/home/bpedrazaa/</Item>
+      <Item>/home/bpedrazaa/videos/</Item>
+      <Item>/home/bpedrazaa/videos/anime/</Item>
+      <Item>/home/bpedrazaa/videos/anime/flcl/</Item>
+      <Item>/home/bpedrazaa/videos/anime/eizouken_ni_wa_te_wo_dasu_na/</Item>
+      <Item>/home/</Item>
+      <Item>/</Item>
+      <Item>/bin/</Item>
+      <Item>/run/</Item>
+      <Item>/run/media/</Item>
+      <Item>/home/bpedrazaa/videos/movies/</Item>
+      <Item>/run/media/bpedrazaa/external_disk/</Item>
+      <Item>/home/bpedrazaa/videos/recordings/</Item>
+      <Item>/home/bpedrazaa/downloads/</Item>
+      <Item>/home/bpedrazaa/downloads/io_data/</Item>
+      <Item>/home/bpedrazaa/downloads/nano_andes_2024/</Item>
+      <Item>/home/bpedrazaa/downloads/original/</Item>
+      <Item>/home/bpedrazaa/downloads/overleaf_projects/</Item>
+      <Item>/home/bpedrazaa/downloads/rosepine/</Item>
+      <Item>/home/bpedrazaa/x/</Item>
+      <Item>/run/media/bpedrazaa/external_disk/my_stuff/videos/entertainment/movies/</Item>
+      <Item>/run/media/bpedrazaa/external_disk/my_stuff/videos/entertainment/</Item>
+      <Item>/home/bpedrazaa/videos/movs/</Item>
+      <Item>/run/media/bpedrazaa/external_disk/my_stuff/videos/entertainment/anime/</Item>
+      <Item>/run/media/bpedrazaa/external_disk/my_stuff/videos/</Item>
+      <Item>/run/media/bpedrazaa/external_disk/my_stuff/</Item>
+      <Item>/run/media/bpedrazaa/</Item>
+      <Item>/run/media/bpedrazaa/boris_28G/</Item>
+      <Item>/home/bpedrazaa/pictures/</Item>
+      <Item>/home/bpedrazaa/pictures/art/</Item>
+      <Item>/home/bpedrazaa/pictures/personal/</Item>
+      <Item>/run/media/bpedrazaa/BORIS_8G/</Item>
+      <Item>/run/media/bpedrazaa/BORIS_8G/x/</Item>
+      <Item>/run/media/bpedrazaa/BORIS_8G/cinti/street_light_remote_lab/</Item>
+      <Item>/run/media/bpedrazaa/BORIS_8G/cinti/street_light_remote_lab/slrl_configuration/</Item>
+      <Item>/run/media/bpedrazaa/BORIS_8G/cinti/</Item>
+      <Item>/home/bpedrazaa/pictures/art/findings/desktop_ratio/</Item>
+      <Item>/home/bpedrazaa/pictures/art/findings/desktop_ratio/test_nord/</Item>
+      <Item>/home/bpedrazaa/pictures/art/findings/desktop_ratio/test/</Item>
+      <Item>/home/bpedrazaa/pictures/art/findings/desktop_ratio/original/</Item>
+      <Item>/home/bpedrazaa/pictures/art/findings/</Item>
+      <Item>/home/bpedrazaa/pictures/funny/</Item>
+      <Item>/home/bpedrazaa/documents/</Item>
+      <Item>/run/media/bpedrazaa/BORIS_8G/io/</Item>
+      <Item>/run/media/bpedrazaa/BORIS_8G/media/</Item>
+      <Item>/run/media/bpedrazaa/BORIS_8G/rice/</Item>
+      <Item>/run/media/bpedrazaa/BORIS_8G/rice/nvim/</Item>
+      <Item>/run/media/bpedrazaa/BORIS_8G/rice/kitty/</Item>
+      <Item>/home/bpedrazaa/documents/family/</Item>
+      <Item>/run/media/bpedrazaa/BPF_32GB/</Item>
+    </Navigation>
+    <CommandLine>
+      <Item>smki</Item>
+      <Item>cps</Item>
+      <Item>st .</Item>
+      <Item>mar</Item>
+      <Item>alumno</Item>
+    </CommandLine>
+    <FileMask>
+      <Item>999</Item>
+      <Item>cameron</Item>
+      <Item>*.*</Item>
+    </FileMask>
+    <VolumeSize/>
+    <CreateDirectories>
+      <Item Tag="0">tutorials</Item>
+      <Item Tag="0">movs</Item>
+      <Item Tag="0">nano_andes_2024</Item>
+      <Item Tag="0">x</Item>
+      <Item Tag="0">test_nord</Item>
+      <Item Tag="0">test</Item>
+      <Item Tag="0">family</Item>
+      <Item Tag="0">camera_ready</Item>
+      <Item Tag="0">to_read</Item>
+      <Item Tag="0">bs_papers_candidates</Item>
+      <Item Tag="0">bs_papers</Item>
+      <Item Tag="0">dev</Item>
+      <Item Tag="0">ste_2025_papers</Item>
+      <Item Tag="0">old</Item>
+    </CreateDirectories>
+    <SearchText>
+      <Item Tag="0">scroll</Item>
+    </SearchText>
+    <SearchTextPath/>
+    <ReplaceText/>
+    <ReplaceTextPath/>
+    <RenameNameMask>
+      <Item>Srdja Penezic - [N]</Item>
+      <Item>Gerard Johnstone - [N]</Item>
+      <Item>Philippe Lacheau - Super-héros malgré lui (2021)</Item>
+      <Item>Ruben Östlund - [N]</Item>
+      <Item>ste_[N]</Item>
+    </RenameNameMask>
+    <RenameExtMask>
+      <Item>[E]</Item>
+    </RenameExtMask>
+    <SearchDirectories>
+      <Item>/home/bpedrazaa/pictures/art/findings/desktop_ratio/original/</Item>
+      <Item>/run/media/bpedrazaa/external_disk/my_stuff/videos/entertainment/movies/</Item>
+    </SearchDirectories>
+    <SearchExcludeFiles/>
+    <SearchExcludeDirectories/>
+  </History>
+</doublecmd>
