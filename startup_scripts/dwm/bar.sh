@@ -1,8 +1,8 @@
 #! /bin/bash
 
 # Change accordingly
-WIFI_INTERFACE="wlp11s0"
-ETH_INTERFACE="enp0s31f6"
+WIFI_INTERFACE=""
+ETH_INTERFACE=""
 BATTERY=""
 
 get_battery() {
