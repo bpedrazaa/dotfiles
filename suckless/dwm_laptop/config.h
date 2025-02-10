@@ -27,22 +27,22 @@ static const char *colors[][3]            = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "󰈹", "󰓇", "", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "󰈹", "", "󰓇", "", "", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-  /* class         instance title           tags mask  isfloating  isterminal  noswallow  monitor */
-  { "kitty",       NULL,    NULL,           0,         0,          1,          0,        -1 },
-  { "st-256color", NULL,    NULL,           0,         0,          1,          0,        -1 },
-	{ "firefox",     NULL,    NULL,           1 << 1,    0,          0,          -1,        0 },
-	{ "Spotify",     NULL,    NULL,           1 << 2,    0,          0,          0,         0 },
-	{ "thunderbird", NULL,    NULL,           1 << 3,    0,          0,          0,         0 },
-	{ "obs",         NULL,    NULL,           1 << 4,    0,          0,          0,         0 },
-	{ "doublecmd",   NULL,    NULL,           0,         1,          0,          0,         0 },
-  { NULL,          NULL,    "Event Tester", 0,         0,          0,          1,        -1 }, /* xev */
+  /* class              instance title           tags mask  isfloating  isterminal  noswallow  monitor */
+  { "kitty",            NULL,    NULL,           0,         0,          1,          0,        -1 },
+  { "st-256color",      NULL,    NULL,           0,         0,          1,          0,        -1 },
+	{ "firefox",          NULL,    NULL,           1 << 1,    0,          0,          -1,        0 },
+	{ "Double Commander", NULL,    NULL,           1 << 2,    0,          0,          0,         0 },
+	{ "Spotify",          NULL,    NULL,           1 << 3,    0,          0,          0,         0 },
+	{ "thunderbird",      NULL,    NULL,           1 << 4,    0,          0,          0,         0 },
+	{ "obs",              NULL,    NULL,           1 << 5,    0,          0,          0,         0 },
+  { NULL,               NULL,    "Event Tester", 0,         0,          0,          1,        -1 }, /* xev */
 };
 
 /* layout(s) */
@@ -80,10 +80,11 @@ static const char *spotify_prev[] = { "dbus-send", "--print-reply", "--dest=org.
 static const char *spotify_play_pause[] = { "dbus-send", "--print-reply", "--dest=org.mpris.MediaPlayer2.spotify", "/org/mpris/MediaPlayer2", "org.mpris.MediaPlayer2.Player.PlayPause", NULL };
 static const char *obs[] = { "obs", NULL };
 static const char *flameshot[] = { "flameshot", "gui", NULL };
+static const char *doublecmd[] = { "doublecmd", NULL };
 
 // Laptop configuration
-static const char *inclight[] = {"xbacklight", "-inc", "10", NULL};
-static const char *declight[] = {"xbacklight", "-dec", "10", NULL};
+static const char *inclight[] = {"brillo", "-A", "10", NULL};
+static const char *declight[] = {"brillo", "-U", "10", NULL};
 static const char *incvolume[] = {"pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL};
 static const char *decvolume[] = {"pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL};
 static const char *mutevolume[] = {"pactl", "set-sink-mute", "@DEFAULT_SINK@", NULL};
@@ -93,10 +94,11 @@ static const Key keys[] = {
   /* apps */
 	{ MODKEY,                       XK_Return, spawn,          {.v = terminal } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browser} },
+	{ MODKEY,                       XK_d,      spawn,          {.v = doublecmd} },
 	{ MODKEY,                       XK_s,      spawn,          {.v = spotify} },
 	{ ControlMask,                  XK_Right,  spawn,          {.v = spotify_next} },
 	{ ControlMask,                  XK_Left,   spawn,          {.v = spotify_prev} },
-	{ ControlMask,                  XK_Tab,    spawn,          {.v = spotify_play_pause} },
+	{ ControlMask,                  XK_space,    spawn,          {.v = spotify_play_pause} },
 	{ MODKEY,                       XK_o,      spawn,          {.v = obs} },
 	{ MODKEY,                       XK_space,  spawn,          {.v = rofi } },
   { 0,                            XK_Print,  spawn,          {.v = flameshot } },
