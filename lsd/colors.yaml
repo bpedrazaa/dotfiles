@@ -1,38 +1,38 @@
-user:             31
-group:            31
+user: 110
+group: 110
 permission:
-  read:           31
-  write:          31
-  exec:           31
-  exec-sticky:    31
-  no-access:      31
-  octal:          31
-  acl:            31
-  context:        31
+  read: 110
+  write: 110
+  exec: 110
+  exec-sticky: 110
+  no-access: 110
+  octal: 110
+  acl: 110
+  context: 110
 date:
-  hour-old:       31
-  day-old:        31
-  older:          31
+  hour-old: 110
+  day-old: 110
+  older: 110
 size:
-  none:           31
-  small:          31
-  medium:         31
-  large:          31
+  none: 110
+  small: 110
+  medium: 110
+  large: 110
 inode:
-  valid:          31
-  invalid:        31
+  valid: 110
+  invalid: 110
 links:
-  valid:          31
-  invalid:        31
-tree-edge:        31
+  valid: 110
+  invalid: 110
+tree-edge: 110
 git-status:
-  default:        31
-  unmodified:     31
-  ignored:        31
-  new-in-index:   31
-  new-in-workdir: 31
-  typechange:     31
-  deleted:        31
-  renamed:        31
-  modified:       31
-  conflicted:     31
+  default: 110
+  unmodified: 110
+  ignored: 110
+  new-in-index: 110
+  new-in-workdir: 110
+  typechange: 110
+  deleted: 110
+  renamed: 110
+  modified: 110
+  conflicted: 110
