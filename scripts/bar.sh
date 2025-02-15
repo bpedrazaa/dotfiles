@@ -67,7 +67,7 @@ get_network() {
     WIFI_SSID=$(nmcli dev | awk '{ if($2=="wifi" && $3=="connected"){ $1=$2=$3=""; print $0 } }' | awk '{ $1=$1; print $0 }')
     echo "  $WIFI_SSID"
   elif [[ $ETH_STATUS == "up" ]]; then
-    echo "󰈀  Connected"
+    echo "󰈀  $ETH_INTERFACE"
   else
     echo "󱛅  Not Connected"
   fi
