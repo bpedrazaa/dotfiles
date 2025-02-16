@@ -74,6 +74,6 @@ get_network() {
 }
 
 while true; do
-  xsetroot -name "| $(get_cpu_temp) | $(get_ram) | $(get_disk_capacity) | $(get_hour) | $(get_date) | $(get_network) "
+  xsetroot -name "| $(get_disk_capacity) | $(get_ram) | $(get_date) | $(get_hour) | $(get_network) |"
   sleep 1
 done
