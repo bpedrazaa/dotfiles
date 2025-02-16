@@ -31,7 +31,7 @@ get_battery() {
 }
 
 get_hour() {
-  echo "󰥔  $(date '+%H:%M')"
+  echo "󰥔  $(date '+%H:%M:%S')"
 }
 
 get_date() {
