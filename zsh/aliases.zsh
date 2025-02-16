@@ -14,15 +14,14 @@ alias dumpdata="docker-compose run --rm app sh -c 'python manage.py dumpdata --e
 alias loaddata="docker-compose run --rm app sh -c 'python manage.py load_data'"
 alias createsu="docker-compose run --rm app sh -c 'python manage.py createsuperuser'"
 
-alias cps='sudo cp config.def.h config.h'
-alias smki='sudo make clean install'
+alias makedwm="sudo cp config.def.h config.h && sudo make clean install"
 
 t() {
-	if [[ $# -eq 0 ]]; then
-		tmux
-	elif [[ "$1" =~ ^[0-9]+$ ]]; then
-		tmux a -t $1
-	else
-		tmux $1
-	fi
+  if [[ $# -eq 0 ]]; then
+    tmux
+  elif [[ "$1" =~ ^[0-9]+$ ]]; then
+    tmux a -t $1
+  else
+    tmux $1
+  fi
 }
