@@ -15,5 +15,5 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 source /usr/share/nvm/init-nvm.sh
-export PATH=$PATH:/home/bpedrazaa/.local/bin
+export PATH=$PATH:~/.local/bin/
 eval "$(oh-my-posh init zsh --config ~/.config/posh_themes/onenord.omp.json)"
