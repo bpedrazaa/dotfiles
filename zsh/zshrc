@@ -16,4 +16,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source /usr/share/nvm/init-nvm.sh
 export PATH=$PATH:~/.local/bin/
-eval "$(oh-my-posh init zsh --config ~/.config/posh_themes/onenord.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/posh_themes/mod_theme.yaml)"
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  tmux new-session -A -s main
+fi
