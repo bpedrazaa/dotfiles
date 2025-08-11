@@ -1,0 +1,38 @@
+user: 110
+group: 110
+permission:
+  read: 110
+  write: 110
+  exec: 110
+  exec-sticky: 110
+  no-access: 110
+  octal: 110
+  acl: 110
+  context: 110
+date:
+  hour-old: 110
+  day-old: 110
+  older: 110
+size:
+  none: 110
+  small: 110
+  medium: 110
+  large: 110
+inode:
+  valid: 110
+  invalid: 110
+links:
+  valid: 110
+  invalid: 110
+tree-edge: 110
+git-status:
+  default: 110
+  unmodified: 110
+  ignored: 110
+  new-in-index: 110
+  new-in-workdir: 110
+  typechange: 110
+  deleted: 110
+  renamed: 110
+  modified: 110
+  conflicted: 110

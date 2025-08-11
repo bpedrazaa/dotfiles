@@ -9,7 +9,7 @@ palette:
   onenord_git_changed: "#D9A58C"
   onenord_git_ahead_behind: "#E06C75"
   onenord_git_ahead: "#88C0D0"
-  onenord_git_behind: "##EBCB8B"
+  onenord_git_behind: "#EBCB8B"
   onenord_prompt_fg: "#88C0D0"
   onenord_prompt_error: "#E06C75"
   gruvbox_os_fg: "#000000"
@@ -24,6 +24,18 @@ palette:
   gruvbox_git_behind: "#DDC7A1"
   gruvbox_prompt_fg: "#A9B665"
   gruvbox_prompt_error: "#FF6962"
+  black_os_bg: "#333333"
+  black_os_fg: "#EEEEEE"
+  black_path_bg: "#333333"
+  black_path_fg: "#EEEEEE"
+  black_git_bg: "#333333"
+  black_git_fg: "#A8C8A1"
+  black_git_changed: "#F4B183"
+  black_git_ahead_behind: "#F29CA0"
+  black_git_ahead: "#A4C7E6"
+  black_git_behind: "#F2E38A"
+  black_prompt_fg: "#EEEEEE"
+  black_prompt_error: "#F29CA0"
 final_space: true
 version: 3
 blocks:
@@ -35,8 +47,8 @@ blocks:
         style: diamond
         leading_diamond: "\ue0b2"
         template: "{{ if .WSL }}\ue712 on {{ end }} {{ .Icon }}  "
-        foreground: p:onenord_os_fg
-        background: p:onenord_os_bg
+        foreground: p:black_os_fg
+        background: p:black_os_bg
         properties:
           # Review https://ohmyposh.dev/docs/segments/system/os
           arch: "\uf303"
@@ -46,8 +58,8 @@ blocks:
       - type: path
         style: powerline
         template: " {{ .Path }} "
-        foreground: p:onenord_path_fg
-        background: p:onenord_path_bg
+        foreground: p:black_path_fg
+        background: p:black_path_bg
         powerline_symbol: "\ue0b0"
         properties:
           style: folder
@@ -55,19 +67,19 @@ blocks:
         style: powerline
         trailing_diamond: "\ue0b4"
         template: " {{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} "
-        foreground: p:onenord_git_fg
+        foreground: p:black_git_fg
         powerline_symbol: "\ue0b0"
-        background: p:onenord_git_bg
+        background: p:black_git_bg
         properties:
           branch_max_length: 30
           fetch_stash_count: true
           fetch_status: true
           fetch_upstream_icon: true
         foreground_templates:
-          - "{{ if or (.Working.Changed) (.Staging.Changed) }}p:onenord_git_changed{{ end }}"
-          - "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:onenord_git_ahead_behind{{ end }}"
-          - "{{ if gt .Ahead 0 }}p:onenord_git_ahead{{ end }}"
-          - "{{ if gt .Behind 0 }}p:onenord_git_behind{{ end }}"
+          - "{{ if or (.Working.Changed) (.Staging.Changed) }}p:black_git_changed{{ end }}"
+          - "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:black_git_ahead_behind{{ end }}"
+          - "{{ if gt .Ahead 0 }}p:black_git_ahead{{ end }}"
+          - "{{ if gt .Behind 0 }}p:black_git_behind{{ end }}"
   - type: prompt
     alignment: left
     newline: true
@@ -75,8 +87,8 @@ blocks:
       - type: text
         style: plain
         template: "❯"
-        foreground: p:onenord_prompt_fg
+        foreground: p:black_prompt_fg
         properties:
           always_enabled: true
         foreground_templates:
-          - "{{ if gt .Code 0 }}p:onenord_prompt_error{{ end }}"
+          - "{{ if gt .Code 0 }}p:black_prompt_error{{ end }}"

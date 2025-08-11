@@ -1,5 +1,5 @@
 configuration {
-  font: "JetBrainsMono Nerd Font 10";
+  font: "JetBrainsMono Nerd Font 11";
   line-margin: 10;
 
   display-ssh:    "";
@@ -10,7 +10,7 @@ configuration {
   show-icons:     true;
 }
 
-@theme "~/.config/rofi/themes/nord.rasi"
+@theme "~/.config/rofi/themes/black.rasi"
 
 listview {
   lines: 5;
