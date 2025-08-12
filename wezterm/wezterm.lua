@@ -52,6 +52,11 @@ config.keys = {
 	-- New tab
 	{ key = "c", mods = "LEADER", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
 
+	-- Move to previous tab with Ctrl+Shift+h
+	{ key = "h", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTabRelative(-1) },
+	-- Move to next tab with Ctrl+Shift+l
+	{ key = "l", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTabRelative(1) },
+
 	-- Split pane vertically
 	{
 		key = "|",
